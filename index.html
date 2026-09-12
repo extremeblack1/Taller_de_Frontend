@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentidos - Tienda para mascotas</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-title">
+                <h2>Categorías</h2>
+                <span class="paw">🐾</span>
+            </div>
+
+            <nav class="categories" aria-label="Categorías de productos">
+
+                <a href="#" class="category dogs">
+                    <span class="category-icon">🐶</span>
+                    <span>Perros</span>
+                    <span class="arrow">›</span>
+                </a>
+
+                <a href="#" class="category cats">
+                    <span class="category-icon">🐱</span>
+                    <span>Gatos</span>
+                    <span class="arrow">›</span>
+                </a>
+
+                <a href="#" class="category birds">
+                    <span class="category-icon">🐦</span>
+                    <span>Aves</span>
+                    <span class="arrow">›</span>
+                </a>
+
+                <a href="#" class="category small">
+                    <span class="category-icon">🐹</span>
+                    <span>Pequeños<br>animales</span>
+                    <span class="arrow">›</span>
+                </a>
+
+                <a href="#" class="category accessories">
+                    <span class="category-icon">🦴</span>
+                    <span>Accesorios</span>
+                    <span class="arrow">›</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-message">
+                <span>🐾</span>
+                <p>Diferentes<br>mascotas,<br>la misma<br>pasión ♡</p>
+            </div>
+
+            <a href="#" class="account">
+                <span class="account-icon">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+
+                <span>
+                    <strong>Mi cuenta</strong>
+                    <small>Iniciar sesión</small>
+                </span>
+
+                <span class="arrow">›</span>
+            </a>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <a href="#" class="brand" aria-label="Inicio Consentidos">
+
+                    <img src="img/logo-consentidos.png"
+                         alt="Logo de Consentidos">
+
+                    <div class="brand-name">
+                        <h1>Consentidos</h1>
+                        <p>TODO PARA SUS GRANDES HISTORIAS</p>
+                    </div>
+
+                </a>
+
+
+                <form class="search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <label for="search">Buscar productos</label>
+
+                    <input
+                        id="search"
+                        type="search"
+                        placeholder="Buscar productos, marcas o categorías...">
+
+                </form>
+
+
+                <nav class="header-actions" aria-label="Acciones">
+
+                    <a href="#" aria-label="Carrito">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Carrito</span>
+                        <b>0</b>
+                    </a>
+
+                    <a href="#" aria-label="Favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>Favoritos</span>
+                    </a>
+
+                </nav>
+
+            </header>
+
+
+            <div class="content-area">
+
+                <section class="hero">
+
+                    <img
+                        src="img/ofertas-consentidos-sin-boton.jpg"
+                        alt="Ofertas de Consentidos para consentir a nuestras mascotas"
+                    >
+
+                    <a href="#" class="offer-button">
+                        Ver ofertas
+                        <span>›</span>
+                    </a>
+
+                </section>
+
+
+                <section class="products">
+
+                    <div class="section-heading">
+
+                        <div class="heading-left">
+                            <span class="heading-paw">🐾</span>
+
+                            <div>
+                                <h2>Productos destacados</h2>
+                            </div>
+                        </div>
+
+                        <a href="#">
+                            Ver todos
+                            <span>›</span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-grid">
+
+
+                        <article class="product-card">
+
+                            <div class="product-image">
+                                <img src="img/producto-perros.png"
+                                     alt="Alimento para perros">
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Alimento<br>para perros</h3>
+
+                                <p>
+                                    Nutrición completa<br>
+                                    para su bienestar.
+                                </p>
+                            </div>
+
+                        </article>
+
+
+                        <article class="product-card">
+
+                            <div class="product-image">
+                                <img src="img/producto-gatos.png"
+                                     alt="Snacks para gatos">
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Snacks<br>para gatos</h3>
+
+                                <p>
+                                    Un premio en cada<br>
+                                    momento.
+                                </p>
+                            </div>
+
+                        </article>
+
+
+                        <article class="product-card">
+
+                            <div class="product-image">
+                                <img src="img/producto-aves.png"
+                                     alt="Alimento para aves">
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Alimento<br>para aves</h3>
+
+                                <p>
+                                    Mezcla nutritiva<br>
+                                    para su bienestar.
+                                </p>
+                            </div>
+
+                        </article>
+
+
+                        <article class="product-card">
+
+                            <div class="product-image">
+                                <img src="img/producto-pequenos.png"
+                                     alt="Juguete para pequeños animales">
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Juguete para<br>pequeños animales</h3>
+
+                                <p>
+                                    Diversión para sus<br>
+                                    momentos de juego.
+                                </p>
+                            </div>
+
+                        </article>
+
+
+                        <article class="product-card">
+
+                            <div class="product-image">
+                                <img src="img/producto-collar.png"
+                                     alt="Collar ajustable">
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Collar ajustable</h3>
+
+                                <p>
+                                    Seguridad y estilo<br>
+                                    en cada paseo.
+                                </p>
+                            </div>
+
+                        </article>
+
+
+                        <article class="product-card">
+
+                            <div class="product-image">
+                                <img src="img/producto-shampoo.png"
+                                     alt="Shampoo para mascotas">
+                            </div>
+
+                            <div class="product-info">
+                                <h3>Shampoo<br>para mascotas</h3>
+
+                                <p>
+                                    Cuidado suave para<br>
+                                    su piel y pelaje.
+                                </p>
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <footer class="footer">
+
+                <div class="footer-brand">
+
+                    <img src="img/logo-consentidos.png"
+                         alt="Logo de Consentidos">
+
+                </div>
+
+
+                <div class="footer-social">
+
+                    <p>
+                        Síguenos en nuestras redes ♡
+                        <span>→</span>
+                    </p>
+
+                    <div class="social-icons">
+
+                        <a href="#"
+                           aria-label="Instagram"
+                           title="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#"
+                           aria-label="Facebook"
+                           title="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#"
+                           aria-label="WhatsApp"
+                           title="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-copy">
+
+                    <p>
+                        Juntos por mascotas más felices ♡
+                    </p>
+
+                    <span></span>
+
+                    <small>
+                        © 2026 Consentidos. Todos los derechos reservados.
+                    </small>
+
+                </div>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
