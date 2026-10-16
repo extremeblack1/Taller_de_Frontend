@@ -1,0 +1,36 @@
+.selector {
+  max-width: 320px;
+  margin: 60px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.selector h2 {
+  margin: 0 0 16px;
+  font-size: 1.3rem;
+}
+
+.selector label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.selector select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.ciudad-elegida {
+  margin-top: 16px;
+  padding: 10px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 8px;
+}
