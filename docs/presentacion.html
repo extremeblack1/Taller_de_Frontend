@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentación - AeroCol</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #131c31;
+      --card-alt: #0f172a;
+      --border: #1e293b;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --green: #10b981;
+      --green-soft: rgba(16, 185, 129, 0.12);
+      --amber: #f59e0b;
+      --amber-soft: rgba(245, 158, 11, 0.12);
+      --red: #f43f5e;
+      --red-soft: rgba(244, 63, 94, 0.12);
+      --text: #f1f5f9;
+      --body: #cbd5e1;
+      --muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .progress-track {
+      height: 3px;
+      background: var(--border);
+      width: 100%;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--accent);
+      width: 20%;
+      transition: width 0.25s ease;
+    }
+
+    .deck {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 48px;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      max-width: 960px;
+      animation: fadeIn 0.25s ease-out;
+    }
+
+    .slide.active { display: flex; flex-direction: column; gap: 22px; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide-tag {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 6px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .slide-tag.green { background: var(--green-soft); color: var(--green); border-color: rgba(16, 185, 129, 0.3); }
+    .slide-tag.red { background: var(--red-soft); color: var(--red); border-color: rgba(244, 63, 94, 0.3); }
+
+    .slide h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      line-height: 1.15;
+    }
+
+    .slide h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+    }
+
+    .lead {
+      font-size: 1.12rem;
+      color: var(--muted);
+      max-width: 760px;
+      line-height: 1.55;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+
+    .panel h3 {
+      font-size: 1.02rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .panel p, .panel li {
+      font-size: 0.94rem;
+      color: var(--body);
+      line-height: 1.55;
+    }
+
+    .panel ul { margin-left: 18px; display: flex; flex-direction: column; gap: 7px; }
+
+    pre {
+      background: #060a14;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.86rem;
+      color: #7dd3fc;
+      overflow-x: auto;
+      line-height: 1.5;
+    }
+
+    .formula-box {
+      background: var(--card-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      color: var(--text);
+    }
+
+    .formula-box span { color: var(--green); }
+
+    .controls {
+      background: var(--card-alt);
+      border-top: 1px solid var(--border);
+      padding: 12px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .btn-nav {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-nav:hover:not(:disabled) {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-nav:disabled { opacity: 0.35; cursor: not-allowed; }
+
+    .dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--border);
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .dot.active {
+      background: var(--accent);
+      width: 24px;
+      border-radius: 999px;
+    }
+
+    .counter {
+      font-size: 0.84rem;
+      color: var(--muted);
+      font-weight: 600;
+      min-width: 60px;
+      text-align: center;
+    }
+
+    @media (max-width: 820px) {
+      .deck { padding: 20px; overflow-y: auto; align-items: flex-start; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .slide h1 { font-size: 2rem; }
+      .slide h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-track">
+    <div class="progress-fill" id="progress"></div>
+  </div>
+
+  <main class="deck">
+    <!-- SLIDE 1 -->
+    <section class="slide active">
+      <span class="slide-tag">Proyecto Final - Desarrollo Front-End</span>
+      <h1>AeroCol Airlines<br><span style="color:var(--accent);">Reserva tu vuelo en segundos</span></h1>
+      <p class="lead">
+        Plataforma web desarrollada en React y Node.js para buscar rutas nacionales, calcular tarifas en tiempo real y emitir reservas persistentes.
+      </p>
+      <p style="font-size:0.95rem; color:var(--text); font-weight:600;">
+        Miguel Núñez (T00063303) &nbsp;|&nbsp; Marien Daniela Toro Mangonez (T00078698)
+      </p>
+      <div class="grid-3">
+        <div class="panel">
+          <h3>Reserva Dinámica</h3>
+          <p>Formulario controlado con cálculo instantáneo según pasajeros y cabina.</p>
+        </div>
+        <div class="panel">
+          <h3>Pases Persistentes</h3>
+          <p>Almacenamiento en servidor local y respaldo automático en el navegador.</p>
+        </div>
+        <div class="panel">
+          <h3>Red Nacional</h3>
+          <p>76 vuelos en 30 rutas con ordenamiento por precio, hora y avión.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2 -->
+    <section class="slide">
+      <span class="slide-tag">01 / Evolución del Sistema</span>
+      <h2>De buscador estático a plataforma completa</h2>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Versión inicial</h3>
+          <ul>
+            <li>Filtro básico por ciudad de origen y destino.</li>
+            <li>Datos estáticos dentro del código fuente.</li>
+            <li>Sin selección de vuelos ni gestión de reservas.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Plataforma actual</h3>
+          <ul>
+            <li>6 ciudades y 76 vuelos servidos desde <code>server.cjs</code>.</li>
+            <li>Flujo completo: buscar, ordenar, elegir, reservar y cancelar.</li>
+            <li>Respaldo automático en <code>localStorage</code> y modo oscuro/claro.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3 -->
+    <section class="slide">
+      <span class="slide-tag">02 / Arquitectura</span>
+      <h2>Árbol de componentes y comunicación</h2>
+      <p class="lead" style="font-size:0.98rem;">
+        Los estados compartidos se subieron a <code>App.jsx</code>. Las props bajan datos y las funciones callback devuelven eventos.
+      </p>
+<pre>                                 App.jsx
+   [origen, destino, orden, vueloSeleccionado, reservas, vuelos, darkMode]
+                                    │
+     ┌──────────────────┬───────────┴───────────────┬──────────────────┐
+     │                  │                           │                  │
+ &lt;Header /&gt;     &lt;SelectorRuta /&gt;             &lt;ListaVuelos /&gt;    &lt;MisReservas /&gt;
+                        │                           │                  │
+                  &lt;SelectCiudad&gt; ×2          &lt;TarjetaVuelo&gt; ×N    (onEliminar)
+                                                    │
+                                          &lt;FormularioReserva /&gt;
+                                      [Local: nombre, pasajeros, claseId]</pre>
+    </section>
+
+    <!-- SLIDE 4 -->
+    <section class="slide">
+      <span class="slide-tag green">03 / Funcionalidad F1</span>
+      <h2>Formulario controlado y estado derivado</h2>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Estados locales en FormularioReserva</h3>
+          <p><code>nombre</code>, <code>pasajeros</code> y <code>claseId</code> viven dentro del formulario porque ningún otro componente necesita leerlos mientras el usuario llena los campos.</p>
+        </div>
+        <div class="panel">
+          <h3>Por qué el total no es un useState</h3>
+          <p>Es un dato derivado: se calcula directo en cada render multiplicando precio, pasajeros y factor. Guardarlo aparte podría causar desincronización.</p>
+        </div>
+      </div>
+      <div class="formula-box">
+        Vuelo AC-006 ($260.000) × 2 pasajeros × Ejecutiva (1.6) = <span>$ 832.000 COP</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 5 -->
+    <section class="slide">
+      <span class="slide-tag red">04 / Funcionalidad F3</span>
+      <h2>Ordenamiento y selección en catálogo</h2>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Ordenar sobre una copia</h3>
+          <p>Como <code>.sort()</code> modifica el array original, hacemos primero una copia con spread operator:</p>
+<pre style="font-size:0.8rem; margin-top:10px;">const vuelosOrdenados = [...vuelosFiltrados].sort((a, b) =&gt; {
+  if (orden === 'precio-asc') return a.precio - b.precio;
+  if (orden === 'hora') return a.hora.localeCompare(b.hora);
+  if (orden === 'avion') return a.avion.localeCompare(b.avion);
+});</pre>
+        </div>
+        <div class="panel">
+          <h3>Comportamiento</h3>
+          <ul>
+            <li>El criterio de <code>orden</code> vive en <code>App.jsx</code>, así que se mantiene al cambiar de ruta.</li>
+            <li><code>TarjetaVuelo</code> recibe <code>esSeleccionada</code> para resaltarse y <code>onSeleccionar</code> para abrir el formulario.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="controls">
+    <button class="btn-nav" id="prevBtn" onclick="changeSlide(-1)">Anterior</button>
+    <div class="dots" id="dots"></div>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <span class="counter" id="counter">1 / 5</span>
+      <button class="btn-nav" id="nextBtn" onclick="changeSlide(1)">Siguiente</button>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dots');
+    const counter = document.getElementById('counter');
+    const progress = document.getElementById('progress');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let current = 0;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => goToSlide(i);
+      dotsContainer.appendChild(dot);
+    });
+
+    function goToSlide(index) {
+      slides[current].classList.remove('active');
+      dotsContainer.children[current].classList.remove('active');
+      current = Math.max(0, Math.min(index, slides.length - 1));
+      slides[current].classList.add('active');
+      dotsContainer.children[current].classList.add('active');
+
+      counter.textContent = `${current + 1} / ${slides.length}`;
+      progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === slides.length - 1;
+    }
+
+    function changeSlide(step) {
+      goToSlide(current + step);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+
+    goToSlide(0);
+  </script>
+</body>
+</html>

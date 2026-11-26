@@ -1,0 +1,250 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R 13 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 5678 >>
+stream
+q 0.040 0.100 0.180 rg 52.0 662.0 508.0 74.0 re f Q
+q 0.220 0.740 0.970 rg 52.0 662.0 5.0 74.0 re f Q
+BT /F2 15 Tf 1.000 1.000 1.000 rg 1 0 0 1 68.0 712.0 Tm (AeroCol Airlines - Guia de Preguntas para Sustentacion) Tj ET
+BT /F1 9.5 Tf 0.580 0.740 0.880 rg 1 0 0 1 68.0 694.0 Tm (Fundamentos teoricos de React y arquitectura de la aplicacion) Tj ET
+BT /F2 9 Tf 0.220 0.740 0.970 rg 1 0 0 1 68.0 677.0 Tm (Miguel Nunez \(T00063303\)  |  Marien Daniela Toro Mangonez \(T00078698\)) Tj ET
+q 0.930 0.960 0.990 rg 52.0 622.0 508.0 22.0 re f Q
+q 0.010 0.520 0.780 rg 52.0 622.0 4.0 22.0 re f Q
+BT /F2 11.5 Tf 0.040 0.100 0.180 rg 1 0 0 1 64.0 629.0 Tm (PARTE 1: PREGUNTAS TEORICAS BASICAS DE REACT) Tj ET
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 612.0 Tm (1. \277Qu\351 es React y para qu\351 sirve?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 597.0 Tm (React es una librer\355a de JavaScript creada por Meta para construir interfaces de usuario) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 584.5 Tm (\(UI\) interactivas y r\341pidas. No es un framework completo \(como Angular\), porque se enfoca) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 572.0 Tm (\372nicamente en la vista y permite dividir la pantalla en piezas independientes llamadas) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 559.5 Tm (componentes.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 543.0 m 560.0 543.0 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 531.0 Tm (2. \277Qu\351 es el Virtual DOM y por qu\351 hace m\341s r\341pida la aplicaci\363n?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 516.0 Tm (El Virtual DOM es una copia ligera del DOM real que React mantiene en memoria. Cuando un) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 503.5 Tm (estado cambia, React compara el Virtual DOM nuevo con el anterior \(reconciliaci\363n\) y) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 491.0 Tm (actualiza en el navegador \372nicamente los nodos que cambiaron, en vez de recargar toda la) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 478.5 Tm (p\341gina.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 462.0 m 560.0 462.0 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 450.0 Tm (3. \277Qu\351 es JSX?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 435.0 Tm (JSX significa JavaScript XML. Es una extensi\363n de sintaxis que permite escribir c\363digo) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 422.5 Tm (parecido a HTML directamente dentro de archivos JavaScript. Por debajo, Vite/Babel lo) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 410.0 Tm (transforma en llamadas a React.createElement\(\).) Tj ET
+q 0.950 0.970 0.990 rg 62.0 385.0 494.0 19.5 re f Q
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 394.5 Tm (Ejemplo en AeroCol: return <TarjetaVuelo vuelo={vuelo} />;) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 376.0 m 560.0 376.0 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 364.0 Tm (4. \277Qu\351 es un componente en React?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 349.0 Tm (Es una funci\363n de JavaScript cuyo nombre empieza en may\372scula, que recibe datos de entrada) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 336.5 Tm (\(props\) y retorna elementos JSX que describen qu\351 se debe pintar en pantalla. Permite) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 324.0 Tm (reutilizar c\363digo y separar responsabilidades.) Tj ET
+q 0.950 0.970 0.990 rg 62.0 287.5 494.0 31.0 re f Q
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 308.5 Tm (En AeroCol: Header, SelectorRuta, SelectCiudad, ListaVuelos, TarjetaVuelo,) Tj ET
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 297.0 Tm (FormularioReserva, MisReservas, Footer.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 278.5 m 560.0 278.5 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 266.5 Tm (5. \277Qu\351 son las props y por qu\351 son inmutables?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 251.5 Tm (Las props \(properties\) son los par\341metros que un componente padre le pasa a un componente) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 239.0 Tm (hijo. Son de solo lectura: un hijo nunca debe modificar directamente sus props, porque el) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 226.5 Tm (flujo de datos en React es unidireccional \(de arriba hacia abajo\).) Tj ET
+q 0.950 0.970 0.990 rg 62.0 190.0 494.0 31.0 re f Q
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 211.0 Tm (Ejemplo: <ListaVuelos vuelos={vuelosOrdenados}) Tj ET
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 199.5 Tm (onSeleccionarVuelo={handleSeleccionarVuelo} />) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 181.0 m 560.0 181.0 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 169.0 Tm (6. \277Cu\341l es la diferencia entre props y state \(estado\)?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 154.0 Tm (Las props vienen desde afuera \(las env\355a el padre\) y no se pueden modificar dentro del hijo.) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 141.5 Tm (El state \(estado\) es la memoria interna que pertenece al propio componente y s\355 puede) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 129.0 Tm (cambiar con el tiempo usando su funci\363n actualizadora \(ej. setOrigen\), provocando que el) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 116.5 Tm (componente se vuelva a renderizar.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 100.0 m 560.0 100.0 l S Q
+BT /F1 8 Tf 0.45 0.50 0.58 rg 1 0 0 1 52.0 26.0 Tm (AeroCol Airlines - Guia de Preguntas Teoricas y de Sustentacion) Tj ET
+BT /F1 8 Tf 0.45 0.50 0.58 rg 1 0 0 1 505.0 26.0 Tm (Pagina 1 de 4) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 6586 >>
+stream
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 736.0 Tm (7. \277C\363mo funciona el hook useState?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 721.0 Tm (useState es un Hook de React que permite agregar estado a un componente funcional. Recibe un) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 708.5 Tm (valor inicial y devuelve un arreglo de dos posiciones: [valorActual,) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 696.0 Tm (funcionParaActualizarlo]. Al llamar la funci\363n actualizadora, React programa un nuevo render) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 683.5 Tm (con el valor actualizado.) Tj ET
+q 0.950 0.970 0.990 rg 62.0 658.5 494.0 19.5 re f Q
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 668.0 Tm (Ejemplo: const [origen, setOrigen] = useState\('MDE'\);) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 649.5 m 560.0 649.5 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 637.5 Tm (8. \277Para qu\351 sirve el hook useEffect?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 622.5 Tm (useEffect permite ejecutar efectos secundarios despu\351s de que el componente se renderiza,) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 610.0 Tm (como peticiones HTTP a un servidor \(fetch\), suscripciones o sincronizaci\363n con localStorage.) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 597.5 Tm (Su segundo par\341metro \(arreglo de dependencias []\) controla cu\341ndo se ejecuta: si est\341 vac\355o) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 585.0 Tm ([], solo corre una vez al montar el componente.) Tj ET
+q 0.950 0.970 0.990 rg 62.0 548.5 494.0 31.0 re f Q
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 569.5 Tm (En AeroCol: carga ciudades, clases, vuelos y reservas desde) Tj ET
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 558.0 Tm (http://localhost:3001/api al iniciar.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 539.5 m 560.0 539.5 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 527.5 Tm (9. \277Qu\351 es el renderizado condicional?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 512.5 Tm (Es la t\351cnica para mostrar u ocultar partes de la interfaz dependiendo de una condici\363n) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 500.0 Tm (booleana o estado. Se suele hacer con el operador && o con el operador ternario \(? :\).) Tj ET
+q 0.950 0.970 0.990 rg 62.0 463.5 494.0 31.0 re f Q
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 484.5 Tm (En AeroCol: {vueloSeleccionado && <FormularioReserva ... />} \(solo muestra el) Tj ET
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 473.0 Tm (formulario si hay vuelo elegido\).) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 454.5 m 560.0 454.5 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 442.5 Tm (10. \277Por qu\351 usamos .map\(\) para listas y para qu\351 sirve la prop key?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 427.5 Tm (.map\(\) transforma un arreglo de datos en un arreglo de elementos JSX. La prop key debe ser) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 415.0 Tm (un identificador \372nico y estable para cada \355tem \(como vuelo.id o reserva.id\), para que React) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 402.5 Tm (sepa exactamente qu\351 elemento se agreg\363, movi\363 o elimin\363 sin re-renderizar toda la lista.) Tj ET
+q 0.950 0.970 0.990 rg 62.0 377.5 494.0 19.5 re f Q
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 387.0 Tm (En AeroCol: vuelos.map\(\(vuelo\) => <TarjetaVuelo key={vuelo.id} ... />\)) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 368.5 m 560.0 368.5 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 356.5 Tm (11. \277Qu\351 es Lifting State Up \(elevar el estado\)?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 341.5 Tm (Es mover un estado al componente padre com\372n m\341s cercano cuando dos o m\341s componentes) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 329.0 Tm (hermanos necesitan leer o modificar ese mismo dato. As\355 se evita duplicar estados y se) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 316.5 Tm (mantiene una \372nica fuente de la verdad.) Tj ET
+q 0.950 0.970 0.990 rg 62.0 280.0 494.0 31.0 re f Q
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 301.0 Tm (En AeroCol: origen y destino viven en App.jsx porque los usan tanto SelectorRuta) Tj ET
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 289.5 Tm (como ListaVuelos.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 271.0 m 560.0 271.0 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 259.0 Tm (12. \277Qu\351 es un formulario controlado?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 244.0 Tm (Es un formulario donde los inputs no guardan su propio valor en el DOM, sino que su atributo) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 231.5 Tm (value est\341 amarrado a un estado de React y se actualiza en cada pulsaci\363n mediante onChange.) Tj ET
+q 0.950 0.970 0.990 rg 62.0 206.5 494.0 19.5 re f Q
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 216.0 Tm (En AeroCol: <input value={nombre} onChange={\(e\) => setNombre\(e.target.value\)} />) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 197.5 m 560.0 197.5 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 185.5 Tm (13. \277Qu\351 es un estado derivado?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 170.5 Tm (Es un valor que se puede calcular directamente a partir de estados o props que ya existen,) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 158.0 Tm (por lo que NO debe guardarse en un useState adicional. Calcularlo en cada render evita) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 145.5 Tm (desincronizaciones.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 129.0 m 560.0 129.0 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 117.0 Tm (14. \277Por qu\351 React exige inmutabilidad en arreglos y objetos del estado?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 102.0 Tm (React detecta cambios comparando referencias en memoria \(Object.is\). Si mutamos un arreglo) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 89.5 Tm (con .push\(\) o .sort\(\) directamente, la referencia sigue siendo la misma y React no actualiza) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 77.0 Tm (la pantalla. Por eso se crean copias nuevas con [...prev] o .filter\(\).) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 60.5 m 560.0 60.5 l S Q
+BT /F1 8 Tf 0.45 0.50 0.58 rg 1 0 0 1 52.0 26.0 Tm (AeroCol Airlines - Guia de Preguntas Teoricas y de Sustentacion) Tj ET
+BT /F1 8 Tf 0.45 0.50 0.58 rg 1 0 0 1 505.0 26.0 Tm (Pagina 2 de 4) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 5673 >>
+stream
+q 0.930 0.960 0.990 rg 52.0 714.0 508.0 22.0 re f Q
+q 0.010 0.520 0.780 rg 52.0 714.0 4.0 22.0 re f Q
+BT /F2 11.5 Tf 0.040 0.100 0.180 rg 1 0 0 1 64.0 721.0 Tm (PARTE 2: PREGUNTAS ESPECIFICAS SOBRE AEROCOL AIRLINES) Tj ET
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 704.0 Tm (15. \277C\363mo est\341 organizado el \341rbol de componentes de AeroCol?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 689.0 Tm (App.jsx es el componente ra\355z. De \351l cuelgan Header, SelectorRuta \(que contiene dos) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 676.5 Tm (SelectCiudad\), ListaVuelos \(que renderiza N tarjetas TarjetaVuelo\), FormularioReserva) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 664.0 Tm (\(condicional\), MisReservas y Footer.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 647.5 m 560.0 647.5 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 635.5 Tm (16. \277D\363nde viven origen, destino, orden, vueloSeleccionado y reservas, y por qu\351?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 620.5 Tm (Todos viven en App.jsx porque son compartidos entre varios componentes. Por ejemplo,) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 608.0 Tm (SelectorRuta modifica origen/destino y ListaVuelos los lee para filtrar; FormularioReserva) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 595.5 Tm (crea reservas y MisReservas las muestra y elimina.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 579.0 m 560.0 579.0 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 567.0 Tm (17. \277Por qu\351 nombre, pasajeros y claseId viven en FormularioReserva.jsx y no en) Tj ET
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 554.0 Tm (App.jsx?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 539.0 Tm (Porque son estados locales temporales del formulario. Ning\372n otro componente necesita saber) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 526.5 Tm (qu\351 est\341 escribiendo el usuario antes de presionar 'Confirmar y Emitir Reserva'.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 510.0 m 560.0 510.0 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 498.0 Tm (18. \277Por qu\351 el total a pagar no es un useState en FormularioReserva?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 483.0 Tm (Porque es un estado derivado: se calcula directamente en cada render multiplicando el precio) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 470.5 Tm (base del vuelo por la cantidad de pasajeros y el factor de la cabina seleccionada.) Tj ET
+q 0.950 0.970 0.990 rg 62.0 434.0 494.0 31.0 re f Q
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 455.0 Tm (Prueba guia: Vuelo AC-006 \($260.000\) x 2 pasajeros x Ejecutiva \(1.6\) = $832.000) Tj ET
+BT /F3 8.5 Tf 0.080 0.300 0.450 rg 1 0 0 1 68.0 443.5 Tm (COP.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 425.0 m 560.0 425.0 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 413.0 Tm (19. \277C\363mo le avisa TarjetaVuelo a App.jsx que fue seleccionada?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 398.0 Tm (App.jsx pasa la funci\363n handleSeleccionarVuelo como prop \(onSeleccionar\) hasta TarjetaVuelo.) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 385.5 Tm (Cuando el usuario hace clic en el bot\363n, la tarjeta ejecuta onSeleccionar\(vuelo\), subiendo) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 373.0 Tm (el objeto del vuelo hasta App.jsx.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 356.5 m 560.0 356.5 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 344.5 Tm (20. \277Por qu\351 ordenamos [...vuelosFiltrados].sort\(...\) y no) Tj ET
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 331.5 Tm (vuelosFiltrados.sort\(...\)?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 316.5 Tm (Porque .sort\(\) en JavaScript muta el arreglo original en su lugar. Al usar el operador) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 304.0 Tm (spread [...vuelosFiltrados] creamos una copia superficial y ordenamos sin alterar el arreglo) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 291.5 Tm (base.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 275.0 m 560.0 275.0 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 263.0 Tm (21. \277Qu\351 pasa con el orden si el usuario cambia de ruta \(ej. de MDE->BOG a) Tj ET
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 250.0 Tm (BOG->CTG\)?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 235.0 Tm (El criterio de ordenamiento se mantiene intacto, porque el estado orden vive independiente) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 222.5 Tm (en App.jsx y no se reinicia al cambiar origen o destino.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 206.0 m 560.0 206.0 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 194.0 Tm (22. \277C\363mo funcionan las reservas y qu\351 pasa al recargar la p\341gina?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 179.0 Tm (Al confirmar una reserva se agrega con [...prev, nuevaReserva] y se env\355a por POST al) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 166.5 Tm (servidor local \(que la guarda en db.json\) y tambi\351n se respalda en localStorage. Al recargar) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 154.0 Tm (la p\341gina \(F5\), App.jsx lee las reservas del servidor \(o de localStorage si el servidor est\341) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 141.5 Tm (apagado\), por lo que no se pierden.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 125.0 m 560.0 125.0 l S Q
+BT /F1 8 Tf 0.45 0.50 0.58 rg 1 0 0 1 52.0 26.0 Tm (AeroCol Airlines - Guia de Preguntas Teoricas y de Sustentacion) Tj ET
+BT /F1 8 Tf 0.45 0.50 0.58 rg 1 0 0 1 505.0 26.0 Tm (Pagina 3 de 4) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 3039 >>
+stream
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 736.0 Tm (23. \277C\363mo se conecta React con el servidor local \(server.cjs\)?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 721.0 Tm (Mediante fetch\(\) hacia http://localhost:3001/api. Al iniciar usa Promise.all para traer) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 708.5 Tm (ciudades, clases, vuelos y reservas \(GET\). Al crear una reserva hace POST /api/reservas y al) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 696.0 Tm (cancelar hace DELETE /api/reservas/:id. Si el servidor est\341 apagado, entra al catch y opera) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 683.5 Tm (en modo local con localStorage.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 667.0 m 560.0 667.0 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 655.0 Tm (24. \277C\363mo implementaron el Modo Oscuro y Modo Claro?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 640.0 Tm (Con un estado darkMode en App.jsx guardado en localStorage \('aerocol_theme'\). Un useEffect) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 627.5 Tm (coloca el atributo data-theme='dark' o 'light' en la etiqueta ra\355z html, y en index.css las) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 615.0 Tm (variables CSS cambian autom\341ticamente los colores de fondo, tarjetas y textos.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 598.5 m 560.0 598.5 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 586.5 Tm (25. \277Qu\351 tendr\355as que cambiar si ma\361ana el cliente pide agregar 'fecha del viaje'?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 571.5 Tm (Agregar un estado fechaViaje en App.jsx, un input <input type='date'> en SelectorRuta,) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 559.0 Tm (filtrar los vuelos por esa fecha si el cat\341logo incluye fechas, y guardar el campo) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 546.5 Tm (fechaViaje dentro del objeto de cada reserva.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 530.0 m 560.0 530.0 l S Q
+BT /F2 10 Tf 0.050 0.150 0.280 rg 1 0 0 1 52.0 518.0 Tm (26. Si algo falla durante la demostraci\363n en vivo, \277d\363nde buscar\355as el error?) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 503.0 Tm (Abrir\355a las DevTools del navegador \(F12\): primero revisar\355a la pesta\361a Console para ver) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 490.5 Tm (errores de JavaScript o React; luego la pesta\361a Network para verificar si las peticiones) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 478.0 Tm (fetch al puerto 3001 respondieron 200/201 o fallaron; y finalmente revisar\355a las props y el) Tj ET
+BT /F1 9.5 Tf 0.180 0.220 0.280 rg 1 0 0 1 62.0 465.5 Tm (estado del componente involucrado.) Tj ET
+q 0.880 0.900 0.940 RG 0.5 w 52.0 449.0 m 560.0 449.0 l S Q
+BT /F1 8 Tf 0.45 0.50 0.58 rg 1 0 0 1 52.0 26.0 Tm (AeroCol Airlines - Guia de Preguntas Teoricas y de Sustentacion) Tj ET
+BT /F1 8 Tf 0.45 0.50 0.58 rg 1 0 0 1 505.0 26.0 Tm (Pagina 4 de 4) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 12 0 R >>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000135 00000 n 
+0000000232 00000 n 
+0000000334 00000 n 
+0000000429 00000 n 
+0000006159 00000 n 
+0000006305 00000 n 
+0000012943 00000 n 
+0000013089 00000 n 
+0000018815 00000 n 
+0000018963 00000 n 
+0000022055 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R >>
+startxref
+22203
+%%EOF

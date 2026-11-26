@@ -1,0 +1,656 @@
+{
+  "ciudades": [
+    {
+      "id": "BOG",
+      "nombre": "Bogotá"
+    },
+    {
+      "id": "MDE",
+      "nombre": "Medellín"
+    },
+    {
+      "id": "CLO",
+      "nombre": "Cali"
+    },
+    {
+      "id": "BAQ",
+      "nombre": "Barranquilla"
+    },
+    {
+      "id": "CTG",
+      "nombre": "Cartagena"
+    },
+    {
+      "id": "BGA",
+      "nombre": "Bucaramanga"
+    }
+  ],
+  "clases": [
+    {
+      "id": "eco",
+      "nombre": "Económica",
+      "factor": 1
+    },
+    {
+      "id": "eje",
+      "nombre": "Ejecutiva",
+      "factor": 1.6
+    },
+    {
+      "id": "pri",
+      "nombre": "Primera",
+      "factor": 2.4
+    }
+  ],
+  "vuelos": [
+    {
+      "id": "v1",
+      "origen": "BOG",
+      "destino": "MDE",
+      "avion": "Airbus A320",
+      "hora": "06:15",
+      "precio": 195000
+    },
+    {
+      "id": "v2",
+      "origen": "BOG",
+      "destino": "MDE",
+      "avion": "Boeing 737",
+      "hora": "08:00",
+      "precio": 220000
+    },
+    {
+      "id": "v3",
+      "origen": "BOG",
+      "destino": "MDE",
+      "avion": "Airbus A321",
+      "hora": "14:30",
+      "precio": 250000
+    },
+    {
+      "id": "v4",
+      "origen": "BOG",
+      "destino": "MDE",
+      "avion": "Embraer 190",
+      "hora": "19:45",
+      "precio": 205000
+    },
+    {
+      "id": "v5",
+      "origen": "MDE",
+      "destino": "BOG",
+      "avion": "Airbus A320",
+      "hora": "06:50",
+      "precio": 210000
+    },
+    {
+      "id": "v6",
+      "origen": "MDE",
+      "destino": "BOG",
+      "avion": "ATR 72",
+      "hora": "09:05",
+      "precio": 260000
+    },
+    {
+      "id": "v7",
+      "origen": "MDE",
+      "destino": "BOG",
+      "avion": "Boeing 737",
+      "hora": "15:20",
+      "precio": 235000
+    },
+    {
+      "id": "v8",
+      "origen": "MDE",
+      "destino": "BOG",
+      "avion": "Airbus A321",
+      "hora": "20:10",
+      "precio": 245000
+    },
+    {
+      "id": "v9",
+      "origen": "BOG",
+      "destino": "CLO",
+      "avion": "Boeing 737",
+      "hora": "07:15",
+      "precio": 215000
+    },
+    {
+      "id": "v10",
+      "origen": "BOG",
+      "destino": "CLO",
+      "avion": "Airbus A320",
+      "hora": "13:30",
+      "precio": 240000
+    },
+    {
+      "id": "v11",
+      "origen": "BOG",
+      "destino": "CLO",
+      "avion": "Embraer 190",
+      "hora": "18:50",
+      "precio": 225000
+    },
+    {
+      "id": "v12",
+      "origen": "CLO",
+      "destino": "BOG",
+      "avion": "Embraer 190",
+      "hora": "06:30",
+      "precio": 210000
+    },
+    {
+      "id": "v13",
+      "origen": "CLO",
+      "destino": "BOG",
+      "avion": "Boeing 737",
+      "hora": "12:10",
+      "precio": 230000
+    },
+    {
+      "id": "v14",
+      "origen": "CLO",
+      "destino": "BOG",
+      "avion": "Airbus A320",
+      "hora": "17:40",
+      "precio": 245000
+    },
+    {
+      "id": "v15",
+      "origen": "BOG",
+      "destino": "BAQ",
+      "avion": "Airbus A320",
+      "hora": "08:15",
+      "precio": 280000
+    },
+    {
+      "id": "v16",
+      "origen": "BOG",
+      "destino": "BAQ",
+      "avion": "Boeing 737",
+      "hora": "14:40",
+      "precio": 310000
+    },
+    {
+      "id": "v17",
+      "origen": "BOG",
+      "destino": "BAQ",
+      "avion": "Airbus A321",
+      "hora": "20:30",
+      "precio": 290000
+    },
+    {
+      "id": "v18",
+      "origen": "BAQ",
+      "destino": "BOG",
+      "avion": "Airbus A320",
+      "hora": "06:45",
+      "precio": 285000
+    },
+    {
+      "id": "v19",
+      "origen": "BAQ",
+      "destino": "BOG",
+      "avion": "Boeing 737",
+      "hora": "13:00",
+      "precio": 305000
+    },
+    {
+      "id": "v20",
+      "origen": "BAQ",
+      "destino": "BOG",
+      "avion": "Airbus A321",
+      "hora": "18:20",
+      "precio": 295000
+    },
+    {
+      "id": "v21",
+      "origen": "BOG",
+      "destino": "CTG",
+      "avion": "Airbus A320",
+      "hora": "07:45",
+      "precio": 320000
+    },
+    {
+      "id": "v22",
+      "origen": "BOG",
+      "destino": "CTG",
+      "avion": "Airbus A321",
+      "hora": "13:15",
+      "precio": 350000
+    },
+    {
+      "id": "v23",
+      "origen": "BOG",
+      "destino": "CTG",
+      "avion": "Boeing 737",
+      "hora": "19:00",
+      "precio": 295000
+    },
+    {
+      "id": "v24",
+      "origen": "CTG",
+      "destino": "BOG",
+      "avion": "Airbus A320",
+      "hora": "07:00",
+      "precio": 310000
+    },
+    {
+      "id": "v25",
+      "origen": "CTG",
+      "destino": "BOG",
+      "avion": "Boeing 737",
+      "hora": "12:30",
+      "precio": 330000
+    },
+    {
+      "id": "v26",
+      "origen": "CTG",
+      "destino": "BOG",
+      "avion": "Airbus A321",
+      "hora": "18:45",
+      "precio": 290000
+    },
+    {
+      "id": "v27",
+      "origen": "BOG",
+      "destino": "BGA",
+      "avion": "ATR 72",
+      "hora": "07:20",
+      "precio": 175000
+    },
+    {
+      "id": "v28",
+      "origen": "BOG",
+      "destino": "BGA",
+      "avion": "Embraer 190",
+      "hora": "14:50",
+      "precio": 195000
+    },
+    {
+      "id": "v29",
+      "origen": "BOG",
+      "destino": "BGA",
+      "avion": "Boeing 737",
+      "hora": "19:30",
+      "precio": 185000
+    },
+    {
+      "id": "v30",
+      "origen": "BGA",
+      "destino": "BOG",
+      "avion": "ATR 72",
+      "hora": "06:10",
+      "precio": 180000
+    },
+    {
+      "id": "v31",
+      "origen": "BGA",
+      "destino": "BOG",
+      "avion": "Embraer 190",
+      "hora": "11:45",
+      "precio": 190000
+    },
+    {
+      "id": "v32",
+      "origen": "BGA",
+      "destino": "BOG",
+      "avion": "Boeing 737",
+      "hora": "17:15",
+      "precio": 185000
+    },
+    {
+      "id": "v33",
+      "origen": "MDE",
+      "destino": "CLO",
+      "avion": "ATR 72",
+      "hora": "08:10",
+      "precio": 185000
+    },
+    {
+      "id": "v34",
+      "origen": "MDE",
+      "destino": "CLO",
+      "avion": "Embraer 190",
+      "hora": "13:40",
+      "precio": 210000
+    },
+    {
+      "id": "v35",
+      "origen": "MDE",
+      "destino": "CLO",
+      "avion": "Airbus A320",
+      "hora": "19:15",
+      "precio": 225000
+    },
+    {
+      "id": "v36",
+      "origen": "CLO",
+      "destino": "MDE",
+      "avion": "ATR 72",
+      "hora": "07:15",
+      "precio": 190000
+    },
+    {
+      "id": "v37",
+      "origen": "CLO",
+      "destino": "MDE",
+      "avion": "Embraer 190",
+      "hora": "12:00",
+      "precio": 215000
+    },
+    {
+      "id": "v38",
+      "origen": "CLO",
+      "destino": "MDE",
+      "avion": "Airbus A320",
+      "hora": "17:30",
+      "precio": 220000
+    },
+    {
+      "id": "v39",
+      "origen": "MDE",
+      "destino": "BAQ",
+      "avion": "Airbus A320",
+      "hora": "09:30",
+      "precio": 270000
+    },
+    {
+      "id": "v40",
+      "origen": "MDE",
+      "destino": "BAQ",
+      "avion": "Boeing 737",
+      "hora": "16:10",
+      "precio": 295000
+    },
+    {
+      "id": "v41",
+      "origen": "BAQ",
+      "destino": "MDE",
+      "avion": "Airbus A320",
+      "hora": "11:45",
+      "precio": 275000
+    },
+    {
+      "id": "v42",
+      "origen": "BAQ",
+      "destino": "MDE",
+      "avion": "Boeing 737",
+      "hora": "18:30",
+      "precio": 290000
+    },
+    {
+      "id": "v43",
+      "origen": "MDE",
+      "destino": "CTG",
+      "avion": "ATR 72",
+      "hora": "08:00",
+      "precio": 270000
+    },
+    {
+      "id": "v44",
+      "origen": "MDE",
+      "destino": "CTG",
+      "avion": "Airbus A320",
+      "hora": "13:20",
+      "precio": 310000
+    },
+    {
+      "id": "v45",
+      "origen": "MDE",
+      "destino": "CTG",
+      "avion": "Boeing 737",
+      "hora": "18:50",
+      "precio": 285000
+    },
+    {
+      "id": "v46",
+      "origen": "CTG",
+      "destino": "MDE",
+      "avion": "Airbus A320",
+      "hora": "10:15",
+      "precio": 295000
+    },
+    {
+      "id": "v47",
+      "origen": "CTG",
+      "destino": "MDE",
+      "avion": "Boeing 737",
+      "hora": "15:40",
+      "precio": 280000
+    },
+    {
+      "id": "v48",
+      "origen": "CTG",
+      "destino": "MDE",
+      "avion": "ATR 72",
+      "hora": "20:30",
+      "precio": 265000
+    },
+    {
+      "id": "v49",
+      "origen": "MDE",
+      "destino": "BGA",
+      "avion": "ATR 72",
+      "hora": "07:50",
+      "precio": 165000
+    },
+    {
+      "id": "v50",
+      "origen": "MDE",
+      "destino": "BGA",
+      "avion": "Embraer 190",
+      "hora": "15:10",
+      "precio": 190000
+    },
+    {
+      "id": "v51",
+      "origen": "BGA",
+      "destino": "MDE",
+      "avion": "ATR 72",
+      "hora": "09:40",
+      "precio": 170000
+    },
+    {
+      "id": "v52",
+      "origen": "BGA",
+      "destino": "MDE",
+      "avion": "Embraer 190",
+      "hora": "17:25",
+      "precio": 185000
+    },
+    {
+      "id": "v53",
+      "origen": "CLO",
+      "destino": "BAQ",
+      "avion": "Boeing 737",
+      "hora": "08:40",
+      "precio": 315000
+    },
+    {
+      "id": "v54",
+      "origen": "CLO",
+      "destino": "BAQ",
+      "avion": "Airbus A320",
+      "hora": "16:20",
+      "precio": 330000
+    },
+    {
+      "id": "v55",
+      "origen": "BAQ",
+      "destino": "CLO",
+      "avion": "Boeing 737",
+      "hora": "11:10",
+      "precio": 310000
+    },
+    {
+      "id": "v56",
+      "origen": "BAQ",
+      "destino": "CLO",
+      "avion": "Airbus A320",
+      "hora": "19:00",
+      "precio": 325000
+    },
+    {
+      "id": "v57",
+      "origen": "CLO",
+      "destino": "CTG",
+      "avion": "Airbus A320",
+      "hora": "09:15",
+      "precio": 340000
+    },
+    {
+      "id": "v58",
+      "origen": "CLO",
+      "destino": "CTG",
+      "avion": "Boeing 737",
+      "hora": "15:50",
+      "precio": 360000
+    },
+    {
+      "id": "v59",
+      "origen": "CTG",
+      "destino": "CLO",
+      "avion": "Airbus A320",
+      "hora": "11:50",
+      "precio": 335000
+    },
+    {
+      "id": "v60",
+      "origen": "CTG",
+      "destino": "CLO",
+      "avion": "Boeing 737",
+      "hora": "18:25",
+      "precio": 355000
+    },
+    {
+      "id": "v61",
+      "origen": "CLO",
+      "destino": "BGA",
+      "avion": "Embraer 190",
+      "hora": "10:30",
+      "precio": 235000
+    },
+    {
+      "id": "v62",
+      "origen": "CLO",
+      "destino": "BGA",
+      "avion": "ATR 72",
+      "hora": "17:00",
+      "precio": 210000
+    },
+    {
+      "id": "v63",
+      "origen": "BGA",
+      "destino": "CLO",
+      "avion": "Embraer 190",
+      "hora": "08:00",
+      "precio": 230000
+    },
+    {
+      "id": "v64",
+      "origen": "BGA",
+      "destino": "CLO",
+      "avion": "ATR 72",
+      "hora": "14:15",
+      "precio": 215000
+    },
+    {
+      "id": "v65",
+      "origen": "BAQ",
+      "destino": "CTG",
+      "avion": "ATR 72",
+      "hora": "07:30",
+      "precio": 120000
+    },
+    {
+      "id": "v66",
+      "origen": "BAQ",
+      "destino": "CTG",
+      "avion": "ATR 72",
+      "hora": "16:00",
+      "precio": 135000
+    },
+    {
+      "id": "v67",
+      "origen": "CTG",
+      "destino": "BAQ",
+      "avion": "ATR 72",
+      "hora": "09:00",
+      "precio": 125000
+    },
+    {
+      "id": "v68",
+      "origen": "CTG",
+      "destino": "BAQ",
+      "avion": "ATR 72",
+      "hora": "17:45",
+      "precio": 130000
+    },
+    {
+      "id": "v69",
+      "origen": "BAQ",
+      "destino": "BGA",
+      "avion": "ATR 72",
+      "hora": "08:15",
+      "precio": 210000
+    },
+    {
+      "id": "v70",
+      "origen": "BAQ",
+      "destino": "BGA",
+      "avion": "Embraer 190",
+      "hora": "15:30",
+      "precio": 240000
+    },
+    {
+      "id": "v71",
+      "origen": "BGA",
+      "destino": "BAQ",
+      "avion": "ATR 72",
+      "hora": "10:30",
+      "precio": 215000
+    },
+    {
+      "id": "v72",
+      "origen": "BGA",
+      "destino": "BAQ",
+      "avion": "Embraer 190",
+      "hora": "18:00",
+      "precio": 235000
+    },
+    {
+      "id": "v73",
+      "origen": "CTG",
+      "destino": "BGA",
+      "avion": "ATR 72",
+      "hora": "08:50",
+      "precio": 220000
+    },
+    {
+      "id": "v74",
+      "origen": "CTG",
+      "destino": "BGA",
+      "avion": "Embraer 190",
+      "hora": "16:45",
+      "precio": 250000
+    },
+    {
+      "id": "v75",
+      "origen": "BGA",
+      "destino": "CTG",
+      "avion": "ATR 72",
+      "hora": "11:20",
+      "precio": 225000
+    },
+    {
+      "id": "v76",
+      "origen": "BGA",
+      "destino": "CTG",
+      "avion": "Embraer 190",
+      "hora": "19:10",
+      "precio": 245000
+    }
+  ],
+  "reservas": []
+}

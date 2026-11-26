@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x2708;&#xfe0f; Proyecto Final&colon; AeroCol Airlines &mdash; Reserva tu vuelo</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="️-proyecto-final-aerocol-airlines--reserva-tu-vuelo">✈️ Proyecto Final: AeroCol Airlines — Reserva tu vuelo</h1>
+<blockquote>
+<p><strong>Módulo:</strong> Desarrollo Front-End · Proyecto Final<br>
+<strong>Integrantes:</strong> Miguel Núñez (T00063303) y Marien Daniela Toro Mangonez (T00078698)<br>
+<strong>Tecnologías:</strong> React 18/19, Vite, JavaScript (ES6+), CSS3 nativo, Node.js HTTP Server (<code>server.cjs</code>).</p>
+</blockquote>
+<p>AeroCol Airlines es una plataforma web para la búsqueda, selección y emisión de reservas de vuelos nacionales en Colombia. Permite consultar itinerarios interconectados entre 6 ciudades, ordenar el catálogo en tiempo real, calcular tarifas dinámicas según cabina y pasajeros, y gestionar reservas con persistencia tanto en almacenamiento local (<code>localStorage</code>) como en un servidor central (<code>db.json</code>).</p>
+<hr>
+<h2 id="-árbol-de-componentes-y-jerarquía-de-estado">🌳 Árbol de Componentes y Jerarquía de Estado</h2>
+<pre><code>                                    App
+  [Estados: origen, destino, orden, vueloSeleccionado, reservas, ciudades, clases, vuelos]
+                                     │
+      ┌────────────────┬─────────────┴─────────────────┬────────────────┐
+      │                │                               │                │
+   &lt;Header&gt;     &lt;SelectorRuta&gt;                   &lt;ListaVuelos&gt;    &lt;MisReservas&gt;
+                       │                               │                │
+                 ┌─────┴─────┐                  ┌──────┴──────┐    (onEliminar)
+                 │           │                  │             │
+           &lt;SelectCiudad&gt; &lt;SelectCiudad&gt;  &lt;TarjetaVuelo&gt; ×N  (vacío)
+              (origen)      (destino)     (onSeleccionar)
+                                                │
+                                      &lt;FormularioReserva&gt;
+                                  (solo si vueloSeleccionado)
+                                         (onReservar)
+</code></pre>
+<hr>
+<h2 id="️-documentación-de-conceptos-fase-2">✍️ Documentación de Conceptos (Fase 2)</h2>
+<h3 id="-f1--formulario-de-reserva">🟢 F1 — Formulario de Reserva</h3>
+<ol>
+<li><strong>¿Dónde viven los estados del formulario y por qué?</strong>
+<ul>
+<li>Viven dentro de <code>FormularioReserva.jsx</code> (<code>nombre</code>, <code>pasajeros</code>, <code>claseId</code>). Son estados locales porque ningún otro componente externo necesita conocer los valores temporales que el usuario escribe o cambia antes de pulsar <em>&quot;Confirmar Reserva&quot;</em>. Solo cuando se envía el formulario, la información empaquetada sube hacia <code>App</code>.</li>
+</ul>
+</li>
+<li><strong>¿Por qué el total no es un <code>useState</code> más?</strong>
+<ul>
+<li>Porque es un <strong>estado derivado</strong>. El total se calcula directamente a partir de valores ya existentes:<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Total</mtext><mo>=</mo><mtext>precioBase</mtext><mo>×</mo><mtext>pasajeros</mtext><mo>×</mo><mtext>factorClase</mtext></mrow><annotation encoding="application/x-tex">\text{Total} = \text{precioBase} \times \text{pasajeros} \times \text{factorClase}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">Total</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">precioBase</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8623em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">pasajeros</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">factorClase</span></span></span></span></span></span></p>
+Si se guardara en un <code>useState</code>, tendríamos dos fuentes de la verdad y riesgo de desincronización al cambiar pasajeros o clase.</li>
+</ul>
+</li>
+<li><strong>¿Qué prop le agregaste a <code>TarjetaVuelo</code> y para qué?</strong>
+<ul>
+<li>Se le agregaron <code>onSeleccionar</code> (función callback) y <code>esSeleccionada</code> (booleano). Permite que la tarjeta le avise al componente padre <code>App</code> cuál vuelo fue clickeado (<em>los datos suben, las funciones bajan</em>) y aplique una clase CSS condicional para resaltarla visualmente.</li>
+</ul>
+</li>
+</ol>
+<h3 id="-f2--mis-reservas-persistencia-con-localstorage-y-api">🟡 F2 — Mis Reservas (Persistencia con <code>localStorage</code> y API)</h3>
+<ol>
+<li><strong>¿Por qué no mutar el array directamente con <code>push</code>?</strong>
+<ul>
+<li>En React, el estado es <strong>inmutable</strong>. Si usamos <code>reservas.push(...)</code>, modificamos la referencia existente en memoria y React no detecta el cambio, por lo que <strong>no re-renderiza</strong> la interfaz. Con <code>[...prev, nueva]</code> se genera una nueva referencia en memoria que dispara el re-renderizado reactivo.</li>
+</ul>
+</li>
+<li><strong>¿Qué le pasa a tus reservas si recargas la página sin <code>localStorage</code>?</strong>
+<ul>
+<li>El estado de React se almacena en la memoria volátil del navegador (RAM de la pestaña). Al recargar la página, todo el árbol de componentes se desmonta y se reinicia a su valor inicial (<code>[]</code>), perdiendo todos los datos si no existe persistencia.</li>
+</ul>
+</li>
+<li><strong>¿Dónde pones la lógica de guardar y por qué?</strong>
+<ul>
+<li>Se gestiona en <code>App.jsx</code>, sincronizando mediante un <code>useEffect</code> cuando el array <code>reservas</code> cambia, y leyendo con una función inicializadora perezosa en <code>useState(() =&gt; JSON.parse(...))</code>. De esta forma, cualquier alta o baja de reservas se refleja fielmente tanto en disco (<code>localStorage</code>) como en el servidor backend.</li>
+</ul>
+</li>
+</ol>
+<h3 id="-f3--catálogo-inteligente-ordenar--detalle">🔴 F3 — Catálogo Inteligente: Ordenar + Detalle</h3>
+<ol>
+<li><strong>¿Por qué hay que ordenar una copia del array y no el original?</strong>
+<ul>
+<li>En JavaScript, <code>.sort()</code> muta el array en su lugar (<em>in-place</em>). Si ordenáramos el array del estado directamente, violaríamos la inmutabilidad de React. Por ello se crea una copia superficial previa con spread operator: <code>[...vuelosFiltrados].sort(...)</code>.</li>
+</ul>
+</li>
+<li><strong>¿Qué pasó con el orden al cambiar de ruta? ¿Se mantiene?</strong>
+<ul>
+<li>Sí, se mantiene porque el estado <code>orden</code> reside en <code>App.jsx</code> y su valor perdura independientemente de los cambios en los desplegables de origen y destino.</li>
+</ul>
+</li>
+<li><strong>¿Cómo le avisa la tarjeta a <code>App</code> que fue seleccionada?</strong>
+<ul>
+<li>Mediante la técnica de <em>lifting state up</em> (elevar el estado): <code>TarjetaVuelo</code> ejecuta la función callback <code>onSeleccionar(vuelo)</code> en su evento <code>onClick</code>, transmitiendo el objeto del vuelo hacia <code>App</code>.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="-decisión-de-diseño-más-importante">💡 Decisión de Diseño más Importante</h2>
+<p>Nuestra decisión de diseño principal fue la <strong>separación estricta de responsabilidades con desacoplamiento total de datos</strong>:
+El frontend en React no almacena datos de catálogo &quot;quemados&quot; (hardcoded). En su lugar, consume un servicio API local REST (<code>server.cjs</code> respaldado por <code>db.json</code>), manteniendo un modo de contingencia con <code>localStorage</code> para garantizar que la app siga operativa incluso sin conexión. Esto garantiza una arquitectura profesional, escalable y mantenible.</p>
+<hr>
+<h2 id="-cómo-ejecutar-la-aplicación">🚀 Cómo ejecutar la aplicación</h2>
+<h3 id="prerrequisitos">Prerrequisitos</h3>
+<ul>
+<li>Node.js</li>
+</ul>
+<h3 id="paso-1-instalar-dependencias">Paso 1: Instalar dependencias</h3>
+<pre><code class="language-bash">npm install
+</code></pre>
+<h3 id="paso-2-iniciar-el-servidor-central-de-datos-terminal-1">Paso 2: Iniciar el servidor central de datos (Terminal 1)</h3>
+<pre><code class="language-bash">npm run server
+</code></pre>
+<h3 id="paso-3-iniciar-la-aplicación-web-react-terminal-2">Paso 3: Iniciar la aplicación web React (Terminal 2)</h3>
+<pre><code class="language-bash">npm run dev
+</code></pre>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>

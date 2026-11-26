@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentación Técnica - AeroCol</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --sidebar: #0f172a;
+      --card: #131c31;
+      --border: #1e293b;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --green: #10b981;
+      --green-soft: rgba(16, 185, 129, 0.12);
+      --red: #f43f5e;
+      --red-soft: rgba(244, 63, 94, 0.12);
+      --text: #f1f5f9;
+      --body: #cbd5e1;
+      --muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--body);
+      line-height: 1.6;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: var(--sidebar);
+      border-right: 1px solid var(--border);
+      padding: 24px 16px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .brand {
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand h2 { font-size: 1.05rem; color: var(--text); font-weight: 700; }
+    .brand span { font-size: 0.78rem; color: var(--muted); }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.86rem;
+      padding: 8px 10px;
+      border-radius: 6px;
+    }
+
+    .nav-links a:hover {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .btn-print {
+      margin-top: auto;
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 9px 12px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+
+    .btn-print:hover { border-color: var(--accent); color: var(--accent); }
+
+    .main {
+      margin-left: 250px;
+      flex: 1;
+      padding: 36px 42px 72px;
+      max-width: 940px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .doc-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+
+    .doc-header h1 {
+      font-size: 1.85rem;
+      color: var(--text);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .doc-header p { color: var(--muted); font-size: 0.92rem; }
+
+    section.doc-block {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 24px;
+      scroll-margin-top: 24px;
+    }
+
+    section.doc-block h2 {
+      color: var(--text);
+      font-size: 1.18rem;
+      margin-bottom: 12px;
+      border-left: 3px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    section.doc-block h3 {
+      color: var(--accent);
+      font-size: 0.96rem;
+      margin: 14px 0 6px;
+    }
+
+    p + p { margin-top: 10px; }
+
+    ul { margin: 8px 0 8px 20px; display: flex; flex-direction: column; gap: 5px; }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.82rem;
+      background: var(--sidebar);
+      color: var(--accent);
+      padding: 1px 5px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    pre {
+      background: #060a14;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      overflow-x: auto;
+      font-family: ui-monospace, monospace;
+      font-size: 0.81rem;
+      color: #e2e8f0;
+      margin-top: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.86rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      background: var(--sidebar);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-family: ui-monospace, monospace;
+    }
+    .b-get { background: var(--accent-soft); color: var(--accent); }
+    .b-post { background: var(--green-soft); color: var(--green); }
+    .b-del { background: var(--red-soft); color: var(--red); }
+
+    @media (max-width: 820px) {
+      .sidebar { position: static; width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+      body { flex-direction: column; }
+      .main { margin-left: 0; padding: 20px; }
+    }
+
+    @media print {
+      body { background: #fff; color: #111; }
+      .sidebar { display: none; }
+      .main { margin-left: 0; padding: 0; max-width: 100%; }
+      section.doc-block { background: #fff; border-color: #ccc; break-inside: avoid; }
+      h1, h2, h3, strong { color: #000 !important; }
+      pre, code { background: #f4f4f4 !important; color: #111 !important; border-color: #ccc !important; }
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <h2>AeroCol Airlines</h2>
+      <span>Documentación del proyecto</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#intro">1. Resumen del proyecto</a>
+      <a href="#arquitectura">2. Arquitectura y estados</a>
+      <a href="#archivos">3. Archivos del proyecto</a>
+      <a href="#funcionalidades">4. Funcionalidades (F1 - F3)</a>
+      <a href="#api">5. Servidor local y API</a>
+      <a href="#ejecucion">6. Cómo ejecutarlo</a>
+    </nav>
+    <button class="btn-print" onclick="window.print()">Imprimir / Guardar PDF</button>
+  </aside>
+
+  <main class="main">
+    <div class="doc-header">
+      <h1>Documentación Técnica - AeroCol</h1>
+      <p>Proyecto Final de Desarrollo Front-End | React + Vite + Node.js</p>
+      <p style="margin-top:6px; color:var(--text); font-weight:600;">
+        Integrantes: Miguel Núñez (T00063303) &nbsp;|&nbsp; Marien Daniela Toro Mangonez (T00078698)
+      </p>
+    </div>
+
+    <section id="intro" class="doc-block">
+      <h2>1. Resumen del proyecto</h2>
+      <p>
+        AeroCol es una aplicación web hecha en React para buscar vuelos nacionales en Colombia, calcular el valor de una reserva según pasajeros y clase, y guardar los tiquetes emitidos.
+      </p>
+      <ul>
+        <li>Conecta 6 ciudades (<code>BOG</code>, <code>MDE</code>, <code>CLO</code>, <code>BAQ</code>, <code>CTG</code>, <code>BGA</code>) con 76 vuelos en 30 rutas directas.</li>
+        <li>Los datos de vuelos, ciudades, clases y reservas se consumen desde un servidor local en Node.js (<code>server.cjs</code>) conectado a <code>db.json</code>.</li>
+        <li>Si el servidor no está encendido, la app usa <code>localStorage</code> como respaldo para no perder las reservas.</li>
+        <li>Incluye cambio entre modo oscuro y modo claro guardado en el navegador.</li>
+      </ul>
+    </section>
+
+    <section id="arquitectura" class="doc-block">
+      <h2>2. Arquitectura, árbol de componentes y ubicación de estados</h2>
+      <p>
+        Los estados que comparten varios componentes viven en <code>App.jsx</code> (elevación del estado). Los datos bajan por props y los eventos suben mediante funciones callback.
+      </p>
+<pre>                                    App.jsx
+      [origen, destino, orden, vueloSeleccionado, reservas, vuelos, ciudades, clases, darkMode]
+                                       │
+        ┌──────────────────┬───────────┴───────────────┬──────────────────┐
+        │                  │                           │                  │
+    &lt;Header /&gt;     &lt;SelectorRuta /&gt;             &lt;ListaVuelos /&gt;    &lt;MisReservas /&gt;
+  (tema oscuro)            │                           │                  │
+                     ┌─────┴─────┐              ┌──────┴──────┐     (onEliminar)
+                     │           │              │             │
+              &lt;SelectCiudad&gt; &lt;SelectCiudad&gt; &lt;TarjetaVuelo&gt; ×N  (estado vacío)
+                 (origen)      (destino)    (onSeleccionar)
+                                                  │
+                                         &lt;FormularioReserva /&gt;
+                                     [Local: nombre, pasajeros, claseId]</pre>
+      <h3>Decisiones de estado</h3>
+      <ul>
+        <li><strong>origen y destino en App.jsx:</strong> Los comparten <code>SelectorRuta</code> (para excluir la ciudad de origen en el selector de destino) y <code>ListaVuelos</code> (para filtrar los vuelos de la ruta).</li>
+        <li><strong>Selección en ListaVuelos y TarjetaVuelo:</strong> <code>ListaVuelos</code> recibe <code>vueloSeleccionado</code> (para resaltar la tarjeta activa) y <code>onSeleccionarVuelo</code> (para notificar a <code>App.jsx</code>).</li>
+        <li><strong>reservas en App.jsx:</strong> Es el ancestro común entre <code>FormularioReserva</code> (quien crea la reserva) y <code>MisReservas</code> (quien lista y elimina).</li>
+      </ul>
+      <h3>Estructura de cada reserva</h3>
+<pre>{
+  "id": "550e8400-e29b-41d4-a716-446655440000",
+  "codigoVuelo": "AC-006",
+  "vueloId": "v6",
+  "nombre": "Ana García",
+  "origen": "MDE",
+  "destino": "BOG",
+  "avion": "ATR 72",
+  "hora": "09:05",
+  "pasajeros": 2,
+  "clase": "Ejecutiva",
+  "total": 832000,
+  "fecha": "21 nov 2026"
+}</pre>
+    </section>
+
+    <section id="archivos" class="doc-block">
+      <h2>3. Archivos del proyecto</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Archivo</th>
+            <th>Función</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>src/main.jsx</code></td><td>Archivo de arranque que renderiza <code>&lt;App /&gt;</code> dentro del HTML.</td></tr>
+          <tr><td><code>src/App.jsx</code></td><td>Componente principal. Carga los datos de la API, filtra y ordena vuelos, gestiona reservas y controla el tema oscuro/claro.</td></tr>
+          <tr><td><code>src/components/Header.jsx</code></td><td>Encabezado con el título de la aerolínea, estado de disponibilidad y botón para cambiar de tema.</td></tr>
+          <tr><td><code>src/components/SelectorRuta.jsx</code></td><td>Contiene los selectores de origen/destino, el botón de intercambio (<code>⇄</code>) y el select para ordenar vuelos.</td></tr>
+          <tr><td><code>src/components/SelectCiudad.jsx</code></td><td>Select reutilizable de ciudades. Filtra <code>excluirId</code> para que el destino no muestre el mismo origen.</td></tr>
+          <tr><td><code>src/components/ListaVuelos.jsx</code></td><td>Muestra el listado de tarjetas de vuelo según la ruta elegida o un aviso si no hay resultados.</td></tr>
+          <tr><td><code>src/components/TarjetaVuelo.jsx</code></td><td>Muestra código del vuelo, avión, hora de salida/llegada, precio y botón para seleccionarlo.</td></tr>
+          <tr><td><code>src/components/FormularioReserva.jsx</code></td><td>Formulario controlado de reserva. Maneja nombre, cantidad de pasajeros, clase y calcula el total.</td></tr>
+          <tr><td><code>src/components/MisReservas.jsx</code></td><td>Lista las reservas guardadas en formato de pase de abordar y permite cancelarlas.</td></tr>
+          <tr><td><code>src/components/Footer.jsx</code></td><td>Pie de página de la aplicación.</td></tr>
+          <tr><td><code>src/index.css</code></td><td>Estilos generales, variables CSS para modo oscuro y claro, y diseño responsivo.</td></tr>
+          <tr><td><code>server.cjs</code></td><td>Servidor HTTP en Node.js (puerto <code>3001</code>) que responde peticiones y actualiza <code>db.json</code>.</td></tr>
+          <tr><td><code>db.json</code></td><td>Archivo JSON donde se guardan ciudades, clases, vuelos y reservas.</td></tr>
+          <tr><td><code>iniciar.bat</code></td><td>Archivo por lotes para abrir servidor y frontend en Windows con doble clic.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="funcionalidades" class="doc-block">
+      <h2>4. Funcionalidades (F1, F2, F3)</h2>
+      <h3>F1 - Formulario de reserva</h3>
+      <p>Usa inputs controlados con <code>value</code> y <code>onChange</code>. El total no se guarda en un <code>useState</code>, sino que es un estado derivado calculado en cada render multiplicando precio, pasajeros y factor de clase. A <code>TarjetaVuelo</code> se le agregaron <code>onSeleccionar</code> y <code>esSeleccionada</code>.</p>
+
+      <h3>F2 - Mis reservas y persistencia</h3>
+      <p>Se respeta la inmutabilidad de React: no se usa <code>.push()</code> porque mutaría la referencia en memoria sin disparar un nuevo render. Para agregar se usa <code>[...prev, nuevaReserva]</code> y para eliminar <code>prev.filter(r =&gt; r.id !== id)</code>. Sin almacenamiento persistente, al recargar la pestaña se perderían las reservas; por eso se sincronizan en <code>App.jsx</code> con el servidor y <code>localStorage</code>.</p>
+
+      <h3>F3 - Ordenar y seleccionar</h3>
+      <p>Como <code>.sort()</code> modifica el array original, primero se saca una copia con <code>[...vuelosFiltrados]</code>. El estado <code>orden</code> vive en <code>App.jsx</code>, así que se mantiene al cambiar las ciudades de ruta. Al seleccionar una tarjeta se resalta y se abre el formulario.</p>
+    </section>
+
+    <section id="api" class="doc-block">
+      <h2>5. Servidor local y rutas API</h2>
+      <p>El backend corre en <code>http://localhost:3001</code> usando únicamente módulos nativos de Node.js (<code>http</code>, <code>fs</code>, <code>path</code>).</p>
+      <table>
+        <thead>
+          <tr><th>Método</th><th>Ruta</th><th>Descripción</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="badge b-get">GET</span></td><td><code>/api/ciudades</code></td><td>Devuelve las ciudades disponibles.</td></tr>
+          <tr><td><span class="badge b-get">GET</span></td><td><code>/api/clases</code></td><td>Devuelve las cabinas y sus multiplicadores de precio.</td></tr>
+          <tr><td><span class="badge b-get">GET</span></td><td><code>/api/vuelos</code></td><td>Devuelve el catálogo completo de vuelos.</td></tr>
+          <tr><td><span class="badge b-get">GET</span></td><td><code>/api/reservas</code></td><td>Devuelve las reservas almacenadas en <code>db.json</code>.</td></tr>
+          <tr><td><span class="badge b-post">POST</span></td><td><code>/api/reservas</code></td><td>Registra una reserva nueva en <code>db.json</code>.</td></tr>
+          <tr><td><span class="badge b-del">DELETE</span></td><td><code>/api/reservas/:id</code></td><td>Borra una reserva según su <code>id</code>.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="ejecucion" class="doc-block">
+      <h2>6. Cómo ejecutarlo</h2>
+<pre># 1. Instalar dependencias (solo la primera vez)
+npm install
+
+# 2. Terminal 1 - Iniciar el servidor de datos
+npm run server
+
+# 3. Terminal 2 - Iniciar React con Vite
+npm run dev</pre>
+      <p>Luego abrir <code>http://localhost:5173</code> en el navegador. En Windows también se puede ejecutar <code>iniciar.bat</code>.</p>
+    </section>
+  </main>
+</body>
+</html>
